@@ -1,30 +1,34 @@
-Drug Classification Analysis
-Table of Contents
-Overview
-Dataset
-Data Preprocessing
-Univariate Analysis
-Model Implementation
-Results
+# Drug Classification Analysis
 
-Overview
-This repository contains the code for drug classification analysis. The analysis includes data preprocessing, exploratory data analysis, and model implementation for classifying drugs based on several parameters.
+## Overview
 
-Dataset
-The dataset used for analysis is named drug.csv. It contains information on drug classification based on various attributes such as Age, Sex, Blood Pressure (BP), Cholesterol, Sodium to Potassium Ratio (Na_to_K), and the corresponding Drug category.
+This project focuses on analyzing a drug classification dataset. The analysis includes data preprocessing, model implementation, and performance evaluation.
 
-Data Preprocessing
-The dataset was preprocessed to handle null values and encode categorical variables using Label Encoding techniques. The unique data features were explored, and the numerical data underwent univariate analysis to understand their distributions.
+## Dataset
 
-Univariate Analysis
-Univariate analysis was performed on the numerical features 'Age' and 'Na_to_K'. The 'Na_to_K' feature exhibited right-skewed behavior and was transformed using a logarithmic scale for normalization.
+- **Source:** `drug.csv`
+- **Description:** The dataset contains information about drug classifications based on attributes like Age, Sex, Blood Pressure (BP), Cholesterol, Sodium to Potassium Ratio (Na_to_K), and the corresponding drug label.
 
-The target variable 'Drug' showed an imbalance in labels, particularly an abundance of 'DrugY', influencing the implementation of class weights during model training to address this imbalance.
+## Data Preprocessing
 
-Model Implementation
-The K-Nearest Neighbors (KNN) classification algorithm was implemented to classify drugs. The dataset was split into training and testing sets. Feature scaling using StandardScaler was applied before training the model.
+- Checked for missing values (None found).
+- Encoded categorical variables using Label Encoding.
+- Explored unique values for each categorical attribute.
 
-The KNN model was trained using cross-validation techniques with varying 'n_neighbors' values. Confusion matrices and performance metrics were calculated for evaluating the model's accuracy, precision, and recall scores.
+## Univariate Analysis
 
-Results
-The KNN model achieved an accuracy score of 80%. Analysis on different 'n_neighbors' values revealed the model's accuracy with varying numbers of neighbors.
+- Conducted univariate analysis for numerical attributes: 'Age' and 'Na_to_K'.
+- Applied log transformation to 'Na_to_K' to achieve a normal distribution.
+
+## Model Implementation
+
+- Utilized K-Nearest Neighbors (KNN) classifier for drug classification.
+- Split the dataset into training and testing sets.
+- Applied Standard Scaling for feature scaling.
+- Explored different 'n_neighbors' values in KNN.
+- Evaluated the model using confusion matrices and performance metrics.
+
+## Results
+
+- Achieved an accuracy of 80%.
+- Investigated the impact of 'n_neighbors' on model performance.
